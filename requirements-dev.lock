@@ -14,6 +14,8 @@ distlib==0.3.8
     # via virtualenv
 filelock==3.14.0
     # via virtualenv
+greenlet==3.0.3
+    # via sqlalchemy
 identify==2.5.36
     # via pre-commit
 iniconfig==2.0.0
@@ -31,6 +33,10 @@ pytest==8.2.0
 pyyaml==6.0.1
     # via pre-commit
 ruff==0.4.4
+sqlalchemy==2.0.31
+    # via sqlite-to-csv
+typing-extensions==4.12.2
+    # via sqlalchemy
 virtualenv==20.26.1
     # via pre-commit
 setuptools==69.5.1

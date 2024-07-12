@@ -8,3 +8,9 @@
 #   with-sources: false
 
 -e file:.
+greenlet==3.0.3
+    # via sqlalchemy
+sqlalchemy==2.0.31
+    # via sqlite-to-csv
+typing-extensions==4.12.2
+    # via sqlalchemy

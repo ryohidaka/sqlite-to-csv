@@ -5,7 +5,9 @@ description = "Export data from a SQLite database to CSV files."
 authors = [
     { name = "ryohidaka", email = "39184410+ryohidaka@users.noreply.github.com" }
 ]
-dependencies = []
+dependencies = [
+    "sqlalchemy>=2.0.31",
+]
 readme = "README.md"
 requires-python = ">= 3.8"
 license = {file = "LICENSE"}
