@@ -1,4 +1,4 @@
-from python_package_template import main
+from sqlite_to_csv import main
 
 
 def test_main():

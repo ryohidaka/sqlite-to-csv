@@ -1,7 +1,7 @@
 [project]
-name = "python-package-template"
+name = "sqlite-to-csv"
 version = "0.1.0"
-description = "Minimum configuration template for publishing packages to PyPI."
+description = "Export data from a SQLite database to CSV files."
 authors = [
     { name = "ryohidaka", email = "39184410+ryohidaka@users.noreply.github.com" }
 ]
@@ -12,13 +12,13 @@ license = {file = "LICENSE"}
 keywords = []
 
 [project.urls]
-Homepage = "https://github.com/ryohidaka/python-package-template"
-Repository = "https://github.com/ryohidaka/python-package-template"
-Issues = "https://github.com/ryohidaka/python-package-template/issues"
-Changelog = "https://github.com/ryohidaka/blob/main/python-package-template/CHANGELOG.md"
+Homepage = "https://github.com/ryohidaka/sqlite-to-csv"
+Repository = "https://github.com/ryohidaka/sqlite-to-csv"
+Issues = "https://github.com/ryohidaka/sqlite-to-csv/issues"
+Changelog = "https://github.com/ryohidaka/blob/main/sqlite-to-csv/CHANGELOG.md"
 
 [project.scripts]
-"python-package-template" = "python_package_template:main"
+"sqlite-to-csv" = "sqlite_to_csv:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -36,4 +36,4 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/python_package_template"]
+packages = ["src/sqlite_to_csv"]

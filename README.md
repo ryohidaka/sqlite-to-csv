@@ -1,17 +1,17 @@
-# python-package-template
+# sqlite-to-csv
 
-[![PyPI version](https://badge.fury.io/py/python-package-template.svg)](https://badge.fury.io/py/python-package-template)
-![build](https://github.com/ryohidaka/python-package-template/workflows/Build/badge.svg)
+[![PyPI version](https://badge.fury.io/py/sqlite-to-csv.svg)](https://badge.fury.io/py/sqlite-to-csv)
+![build](https://github.com/ryohidaka/sqlite-to-csv/workflows/Build/badge.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Minimum configuration template for publishing packages to PyPI.
+Export data from a SQLite database to CSV files.
 
 ## Installation
 
 You can install this library using PyPI:
 
 ```shell
-pip install python-package-template
+pip install sqlite-to-csv
 ```
 
 ## Usage
