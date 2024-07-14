@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/ryohidaka/sqlite-to-csv/compare/v0.1.0...v0.2.0) (2024-07-14)
+
+
+### Features
+
+* Rename package. ([0031e9f](https://github.com/ryohidaka/sqlite-to-csv/commit/0031e9fdc70e275af1a618810314b82239f104e0))
+
 ## 0.1.0 (2024-07-14)
 
 
