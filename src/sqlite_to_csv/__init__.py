@@ -1,3 +1,6 @@
+from sqlite_to_csv.lib.logger import init_logger
+
+
 def main() -> int:
     print("Hello from sqlite-to-csv!")
     app = SqliteToCSV()
@@ -12,4 +15,4 @@ class SqliteToCSV:
     def __init__(
         self,
     ):
-        return
+        self.logger = init_logger()
