@@ -16,6 +16,18 @@ pip install sqlite-to-csv
 
 ## Usage
 
+### Retrieve all tables
+
+```python
+from sqlite_to_csv import SqliteToCSV
+
+database = "sqlite:///db/test.db"
+dest_dir = ".output"
+
+app = SqliteToCSV(database=database, dest_dir=dest_dir)
+app.export()
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
