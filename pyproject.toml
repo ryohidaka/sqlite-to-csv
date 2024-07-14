@@ -1,6 +1,6 @@
 [project]
 name = "sqlite2csv"
-version = "0.1.0"
+version = "0.2.0"
 description = "Export data from a SQLite database to CSV files."
 authors = [
     { name = "ryohidaka", email = "39184410+ryohidaka@users.noreply.github.com" }
