@@ -11,7 +11,7 @@ def main() -> int:
 
     database = os.environ.get("DB")
     dest_dir = ".output"
-    app = SqliteToCSV(database=database, dest_dir=dest_dir)
+    app = SqliteToCSV(database=database, dest_dir=dest_dir, debug=True)
 
     app.export()
     return 0
@@ -25,6 +25,7 @@ class SqliteToCSV:
         database (str): Path to the SQLite database.
         dest_dir (str): Path to export csv.
         table_names (list[str], optional): List of table names to export. If None, all tables will be exported.
+        debug (bool): Enable SQLAlchemy echo for debugging.
 
     Returns:
         None
@@ -35,10 +36,11 @@ class SqliteToCSV:
         database: str,
         dest_dir: str,
         table_names: list[str] = None,
+        debug: bool = False,
     ):
         self.logger = init_logger()
 
-        self.engine = get_engine(logger=self.logger, database=database)
+        self.engine = get_engine(logger=self.logger, database=database, echo=debug)
         self.connection = self.engine.connect()
         self.metadata = MetaData()
 
@@ -46,7 +48,7 @@ class SqliteToCSV:
         self.table_names = table_names
 
         self.logger.info(
-            f"Initialized SqliteToCSV with database: {database}, dest_dir: {dest_dir}, table_names: {table_names}"
+            f"Initialized SqliteToCSV with database: {database}, dest_dir: {dest_dir}, table_names: {table_names}, debug: {debug}"
         )
 
     def export(self):

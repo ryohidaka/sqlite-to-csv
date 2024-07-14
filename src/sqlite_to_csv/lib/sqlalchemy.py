@@ -2,7 +2,7 @@ from logging import Logger
 from sqlalchemy import Engine, create_engine, inspect
 
 
-def get_engine(logger: Logger, database: str):
+def get_engine(logger: Logger, database: str, echo: bool = False):
     """
     Create a SQLAlchemy engine.
 
@@ -13,7 +13,7 @@ def get_engine(logger: Logger, database: str):
     Returns:
         sqlalchemy.engine.Engine: SQLAlchemy engine instance.
     """
-    engine = create_engine(database)
+    engine = create_engine(database, echo=echo)
     logger.info(f"Created SQLAlchemy engine for database: {database}")
     return engine
 
