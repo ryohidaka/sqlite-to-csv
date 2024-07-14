@@ -24,6 +24,7 @@ class SqliteToCSV:
     Args:
         database (str): Path to the SQLite database.
         dest_dir (str): Path to export csv.
+        table_names (list[str], optional): List of table names to export. If None, all tables will be exported.
 
     Returns:
         None
@@ -33,6 +34,7 @@ class SqliteToCSV:
         self,
         database: str,
         dest_dir: str,
+        table_names: list[str] = None,
     ):
         self.logger = init_logger()
 
@@ -41,18 +43,21 @@ class SqliteToCSV:
         self.metadata = MetaData()
 
         self.dest_dir = dest_dir
+        self.table_names = table_names
 
         self.logger.info(
-            f"Initialized SqliteToCSV with database: {database}, dest_dir: {dest_dir}."
+            f"Initialized SqliteToCSV with database: {database}, dest_dir: {dest_dir}, table_names: {table_names}"
         )
 
     def export(self):
-        table_names = get_all_tables(engine=self.engine, logger=self.logger)
+        if not self.table_names:
+            self.table_names = get_all_tables(engine=self.engine, logger=self.logger)
+            self.logger.info(f"Retrieved all table names: {self.table_names}")
 
         # Collect data from tables
         data_frames = {}
 
-        for table_name in table_names:
+        for table_name in self.table_names:
             try:
                 self.logger.info(f"Processing table: {table_name}")
                 table = Table(table_name, self.metadata, autoload_with=self.engine)
