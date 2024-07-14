@@ -1,7 +1,7 @@
-# sqlite-to-csv
+# sqlite2csv
 
-[![PyPI version](https://badge.fury.io/py/sqlite-to-csv.svg)](https://badge.fury.io/py/sqlite-to-csv)
-![build](https://github.com/ryohidaka/sqlite-to-csv/workflows/Build/badge.svg)
+[![PyPI version](https://badge.fury.io/py/sqlite2csv.svg)](https://badge.fury.io/py/sqlite2csv)
+![build](https://github.com/ryohidaka/sqlite2csv/workflows/Build/badge.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Export data from a SQLite database to CSV files.
@@ -11,7 +11,7 @@ Export data from a SQLite database to CSV files.
 You can install this library using PyPI:
 
 ```shell
-pip install sqlite-to-csv
+pip install sqlite2csv
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ pip install sqlite-to-csv
 ### Retrieve all tables
 
 ```python
-from sqlite_to_csv import SqliteToCSV
+from sqlite2csv import SqliteToCSV
 
 database = "sqlite:///db/test.db"
 dest_dir = ".output"
@@ -31,7 +31,7 @@ app.export()
 ### Retrieve an arbitrary tables
 
 ```python
-from sqlite_to_csv import SqliteToCSV
+from sqlite2csv import SqliteToCSV
 
 database = "sqlite:///db/test.db"
 dest_dir = ".output"

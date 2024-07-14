@@ -1,5 +1,5 @@
 [project]
-name = "sqlite-to-csv"
+name = "sqlite2csv"
 version = "0.1.0"
 description = "Export data from a SQLite database to CSV files."
 authors = [
@@ -15,13 +15,13 @@ license = {file = "LICENSE"}
 keywords = ["csv","sqlite","conversion","copy","tool"]
 
 [project.urls]
-Homepage = "https://github.com/ryohidaka/sqlite-to-csv"
-Repository = "https://github.com/ryohidaka/sqlite-to-csv"
-Issues = "https://github.com/ryohidaka/sqlite-to-csv/issues"
-Changelog = "https://github.com/ryohidaka/blob/main/sqlite-to-csv/CHANGELOG.md"
+Homepage = "https://github.com/ryohidaka/sqlite2csv"
+Repository = "https://github.com/ryohidaka/sqlite2csv"
+Issues = "https://github.com/ryohidaka/sqlite2csv/issues"
+Changelog = "https://github.com/ryohidaka/blob/main/sqlite2csv/CHANGELOG.md"
 
 [project.scripts]
-"sqlite-to-csv" = "sqlite_to_csv:main"
+"sqlite2csv" = "sqlite2csv:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -39,4 +39,4 @@ dev-dependencies = [
 allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/sqlite_to_csv"]
+packages = ["src/sqlite2csv"]

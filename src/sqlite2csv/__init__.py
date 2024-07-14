@@ -1,13 +1,13 @@
 import os
 import pandas as pd
 from sqlalchemy import MetaData, Table, select
-from sqlite_to_csv.lib.logger import init_logger
-from sqlite_to_csv.lib.pandas import write_csv
-from sqlite_to_csv.lib.sqlalchemy import get_all_tables, get_engine
+from sqlite2csv.lib.logger import init_logger
+from sqlite2csv.lib.pandas import write_csv
+from sqlite2csv.lib.sqlalchemy import get_all_tables, get_engine
 
 
 def main() -> int:
-    print("Hello from sqlite-to-csv!")
+    print("Hello from sqlite2csv!")
 
     database = os.environ.get("DB")
     dest_dir = ".output"

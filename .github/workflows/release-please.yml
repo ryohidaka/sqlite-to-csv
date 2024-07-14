@@ -16,5 +16,5 @@ jobs:
       - uses: google-github-actions/release-please-action@v3
         with:
           release-type: python
-          package-name: sqlite-to-csv
+          package-name: sqlite2csv
           bump-minor-pre-major: true

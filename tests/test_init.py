@@ -1,4 +1,4 @@
-from sqlite_to_csv import main
+from sqlite2csv import main
 
 
 def test_main():
